@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../../Shared/Loading';
+import OrderModal from './OrderModal';
 
 const PartDetails = () => {
+    const [parts, setParts] = useState(null);
     const { id } = useParams();
     const url = `http://localhost:5000/order/${id}`;
-    const { data: part, isLoading } = useQuery(['order', id], () => fetch(url).then(res => res.json()))
+    const { data: part, isLoading, refetch } = useQuery(['order', id], () => fetch(url).then(res => res.json()))
     if (isLoading) {
         return <Loading />
     }
@@ -26,11 +28,16 @@ const PartDetails = () => {
                     </p >
                     <p>price: ${part?.price}<small className='text-lime-600'>(per unit price)</small></p>
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Place Order</button>
+
+                        <button class="btn btn-primary text-white booking-modal">
+                            <label htmlFor="booking-modal"
+                                onClick={() => setParts(part)}
+                            >Place Order</label>
+                        </button>
                     </div>
                 </div >
             </div >
-
+            {parts && <OrderModal part={parts}></OrderModal>}
         </div >
     );
 };
