@@ -1,0 +1,58 @@
+[
+    {
+        "_id": 1,
+        "name": "Intel Core I7-12700K 12 Core 20 Thread 12th Gen Processor",
+        "img": "https://www.techlandbd.com/image/cache/catalog/Processor/Intel/12th%20Gen/Intel-i7-12700K.jpg-550x550.jpg",
+        "discription": "The New Intel Core I7-12700K Processor Has Eight Golden Cove Cores But Only Four Gracemont Cores. There Are 12 Cores (8+4) And 20 Threads (16+4) In This Model. P-Cores (Golden Cove) Will Have A Base Frequency Of 3.6 GHz And A Maximum Boost Frequency Of Up To 5.0 GHz With 1-2 Active Cores And 4.7 GHz With All Cores Active, While E-Cores (Gracemont) Will Have A Base Frequency Of 3.8 GHz And A Maximum Boost Frequency Of Up To 3.6 GHz When All Cores Are Loaded. The I7-12700K Alder Lake Processor Will Have 25 MB Of L3 Cache And TDP Ratings Of 125W (PL1) And 228W (PL2), Respectively (PL2).",
+        "quantity": 5000,
+        "price": 500
+    },
+    {
+        "_id": 2,
+        "name": "Intel Core I5-11500 6 Core 12 Thread 11th Gen Processor (Tray)",
+        "img": "https://www.techlandbd.com/image/cache/catalog/Processor/Intel/11th-gen/i5-11500/intel-core-i5-11500-tray-processor.jpg-550x550.jpg",
+        "discription": "Power Up Your Productivity, Gaming, And Content Creation Experiences By Installing The Intel Core I5-11500 2.7 GHz Six-Core LGA 1200 Processor Into Your Computing System. Built Employing A 14nm Process, This 11th Generation Desktop Processor Features A Base Clock Frequency Of Two.7 GHz And A 4.6 GHz Turbo Frequency With 12MB Of Cache, Six Cores, And Twelve Threads For Fast And Reliable Performance. The Core I5-11500 Also Includes Support For PCI Express 4.0 And Dual-Channel DDR4 Memory At 3200 MHz To Assist Run And Multitask A Spread Of Demanding Applications And Games Using Technologies Like Built-In AI Acceleration. Performance Is Often Further Enhanced With Overclocking And By Installing Intel Optane Memory To Cache Frequently Accessed Data.",
+        "quantity": 10000,
+        "price": 250
+    },
+    {
+        "_id": 3,
+        "name": "ASRock B560 Pro4 10th And 11th Gen ATX Motherboard",
+        "img": "https://www.techlandbd.com/image/cache/catalog/Motherboard/Asrock/Intel/B560%20Pro4/asrock-b560-pro4-atx-motherboard-2.jpg-550x550.jpg",
+        "discription": "ASRock Motherboards Deliver Stunning Performance And Superior Aesthetics To Rule Your Own Colorful Lighting Way! ASRock Offers A Very Comprehensive Control To Perform The Built-In RGB LEDs Or The Connected LED Strips, CPU Fans, Coolers, Chassis And Any RGB Devices Smoothly. Devices Can Be Synchronized Across The Polychrome RGB Sync-Certified Accessories As Well.",
+        "quantity": 10000,
+        "price": 180
+    },
+    {
+        "_id": 4,
+        "name": "Corsair Vengeance LPX 16GB DDR4 3200Mhz Desktop Ram",
+        "img": "https://www.techlandbd.com/image/cache/catalog/RAM/Corsair/Corsair-Vengeance-LPX-16GB-(1x16GB)-DDR4-3000MHz-Ram.jpg-550x550w.jpg",
+        "discription": "VENGEANCE LPX Memory Is Designed For High-Performance Overclocking. The Heatspreader Is Made Of Pure Aluminum For Faster Heat Dissipation, And The Custom Performance PCB Helps Manage Heat And Provides Superior Overclocking Headroom. Each IC Is Individually Screened For Peak Performance Potential.",
+        "quantity": 10000,
+        "price": 95
+    },
+    {
+        "_id": 5,
+        "name": "Walton WS5512D 512GB 2.5” SATA III SSD With DRAM Cache",
+        "img": "https://www.techlandbd.com/image/cache/catalog/SSD/WALTON/sata/ws5512d/walton-ws5512d-sata-ssd-1.jpg-550x550.jpg",
+        "discription": " Dynamic Wear Leveling Bad Block Management TRIM SMART Over-Provision",
+        "quantity": 10000,
+        "price": 78
+    },
+    {
+        "_id": 6,
+        "name": "Sapphire Nitro+ S360-A ARGB 360mm All In One Liquid Cooler",
+        "img": "https://www.techlandbd.com/image/cache/catalog/CPU-Cooler/Sapphire/sapphire-nitro-360-aio-3.jpg-550x550.jpg",
+        "discription": "A Performance Engineered Pump And Cold Plate That Delivers Up To 15% Greater Thermal Performance Over Previous Generations Of Leading-Edge Solutions. It Is The Industry’s First Desktop Liquid Cooling Product To Feature Out-Of-Bounds Temperature Sensing While The Cooler Continuously Monitors The Liquid Temperature. It Automatically Boosts The Pump Speed To Clear Any Temperature Excursions, Ensuring Smooth System Operation For An Immersive Gameplay Experience While Under-The-Hood System Enhancements Result In Quieter Operation",
+        "quantity": 10000,
+        "price": 200
+    },
+    {
+        "_id": 7,
+        "name": "Colorful IGame GeForce RTX 3060 Ti Ultra W OC LHR-V 8GB GDDR6 Graphics Card",
+        "img": "https://www.techlandbd.com/image/cache/catalog/Graphics%20Card/Colorful/3060/RTX%203060%20Ti%20Ultra%20W%20OC-V/colorful-rtx-3060-ti-ultra-w-oc-v-graphics-card-1.jpg-550x550.jpg",
+        "discription": "Witness The New Era Of Gaming. The GeForce RTX 3080 Is Powered By The NVIDIA Ampere Architecture And Delivers Epic Performance That Gamers Crave For 4K Resolution Gaming. It's Built With Enhanced RT Cores And Tensor Cores, New Streaming Multiprocessors, And Superfast G6X Memory For An Amazing Gaming Experience. This Zotac AMP Holo Edition Is Factory Overclocked To 1770 MHz Boost Clock (1710 MHz For Reference Card), And Comes With IceStorm 2.0 Thermal Solution For Optimized Cooling. That Performance Is Matched By Brilliant RGB Lighting On The Faceplate And Metal Backplate To Light Up Your Competition.",
+        "quantity": 10000,
+        "price": 700
+    }
+]
