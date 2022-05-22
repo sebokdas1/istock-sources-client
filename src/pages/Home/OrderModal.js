@@ -45,7 +45,7 @@ const OrderModal = ({ part }) => {
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 className="font-bold text-lg text-secondary">Order for {name}</h3>
+                    <h3 className="font-bold text-lg text-secondary">{name}</h3>
                     <form className='grid grid-cols-1 justify-items-center mt-3 gap-4'>
                         <input type="text" disabled className="input input-bordered input-primary w-full max-w-xs" />
 
@@ -53,15 +53,14 @@ const OrderModal = ({ part }) => {
 
                         <input type="email" name='email' disabled placeholder={user?.email || ''} className="input input-bordered input-primary w-full max-w-xs" /> */}
 
-                        <input type="number" name='Oquantity' min="1000" placeholder="Order quantity, minimum 1000" className="input input-bordered input-primary w-full max-w-xs" />
+                        <input type="number" name='Oquantity' min="100" placeholder="Order quantity, minimum 100" className="input input-bordered input-primary w-full max-w-xs" />
 
                         <input type="text" name='address' placeholder="Your Address..." className="input input-bordered input-primary w-full max-w-xs" />
 
                         <input type="number" name='phone' placeholder="Phone Number" className="input input-bordered input-primary w-full max-w-xs" />
 
-                        <input type="submit" value="order" className="btn btn-secondary w-full max-w-xs" />
+                        <input type="submit" value="order" className="btn btn-secondary w-full max-w-xs text-white" />
                     </form>
-
                 </div>
             </div>
         </div>

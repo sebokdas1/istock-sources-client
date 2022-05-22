@@ -23,7 +23,7 @@ const PartDetails = () => {
                     <h2 class="card-title">{part?.name}</h2>
                     <p>{part?.discription.slice(0, 180)}</p>
                     <p className='grid grid-cols-2'>
-                        < p className='text-red-700' > Minimum order: 1000</p >
+                        < p className='text-red-700' > Minimum order: 100</p >
                         <p>Available: {part?.quantity}</p>
                     </p >
                     <p>price: ${part?.price}<small className='text-lime-600'>(per unit price)</small></p>

@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home/Home';
 import PartDetails from './pages/Home/PartDetails';
+import Login from './pages/login/Login';
+import Register from './pages/login/Register';
 import Navbar from './Shared/Navbar';
 
 function App() {
@@ -11,6 +13,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='part/:id' element={<PartDetails />}></Route>
+        <Route path='login' element={<Login />}></Route>
+        <Route path='register' element={<Register />}></Route>
       </Routes>
     </div>
   );

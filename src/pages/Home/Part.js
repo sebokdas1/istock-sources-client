@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Loading from '../../Shared/Loading';
 
 const Part = ({ part }) => {
     const { _id, name, img, discription, quantity, price } = part;
@@ -19,7 +18,7 @@ const Part = ({ part }) => {
                 <p>{discription?.slice(0, 35)}</p>
 
                 <div>
-                    <p className='text-red-500'>Minimum Order: 1000</p>
+                    <p className='text-red-500'>Minimum Order: 100</p>
                     <p>Available: {quantity}</p>
                 </div>
                 <p>Price: ${price}<small className='text-lime-600'>(per unit price)</small></p>
