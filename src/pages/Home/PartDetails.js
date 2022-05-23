@@ -37,7 +37,7 @@ const PartDetails = () => {
                     </div>
                 </div >
             </div >
-            {parts && <OrderModal part={parts} refetch={refetch}></OrderModal>}
+            {parts && <OrderModal part={parts} refetch={refetch} setParts={setParts}></OrderModal>}
         </div >
     );
 };
