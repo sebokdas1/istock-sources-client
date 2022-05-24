@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const OrderModal = ({ part, refetch, setParts }) => {
     const { _id, name, quantity, price } = part;
     const [user] = useAuthState(auth);
 
+    const [newQuantity, setNewQuantity] = useState(100);
+
     const handleOrder = e => {
         e.preventDefault();
-        const orderQuantity = e.target.Oquantity.value;
+
         const address = e.target.address.value;
         const order = {
             orderId: _id,
             name,
             price,
-            orderQuantity,
+            orderQuantity: newQuantity,
             address,
             user: user.email,
             userName: user.displayName,
@@ -32,7 +33,7 @@ const OrderModal = ({ part, refetch, setParts }) => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    toast(`Your Order is Placed`)
+                    alert(`Your Order is Placed`)
                 }
                 refetch();
                 setParts(null);
@@ -47,22 +48,23 @@ const OrderModal = ({ part, refetch, setParts }) => {
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="font-bold text-lg text-secondary">{name}</h3>
                     <form onSubmit={handleOrder} className='grid grid-cols-1 justify-items-center mt-3 gap-4'>
-                        <input type="text" disabled placeholder={quantity} className="input input-bordered input-primary w-full max-w-xs" />
 
-                        <input type="text" name='name' disabled placeholder={user?.displayName || ''} className="input input-bordered input-primary w-full max-w-xs" />
+                        <input type="text" name='name' readOnly placeholder={user?.displayName || ''} className="input input-bordered input-primary w-full max-w-xs" />
 
-                        <input type="email" name='email' disabled placeholder={user?.email || ''} className="input input-bordered input-primary w-full max-w-xs" />
+                        <input type="email" name='email' readOnly placeholder={user?.email || ''} className="input input-bordered input-primary w-full max-w-xs" />
 
-                        <input type="number" name='Oquantity' min="100" placeholder="Order quantity, minimum 100" className="input input-bordered input-primary w-full max-w-xs" required />
+                        <input onChange={(e) => setNewQuantity(e.target.value)} type="number" name='Oquantity' min="100" max={quantity} placeholder="Order quantity, minimum 100" className="input input-bordered input-primary w-full max-w-xs" required />
+                        { }
 
                         <input type="text" name='address' placeholder="Your Address..." className="input input-bordered input-primary w-full max-w-xs" required />
 
                         <input type="number" name='phone' placeholder="Phone Number" className="input input-bordered input-primary w-full max-w-xs" required />
 
-                        <input type="submit" value="order" className="btn btn-secondary w-full max-w-xs text-white" />
+                        <input disabled={!newQuantity || newQuantity > quantity} type="submit" value="order" className="btn btn-secondary w-full max-w-xs text-white" />
                     </form>
                 </div>
             </div>
+
         </div>
     );
 };
