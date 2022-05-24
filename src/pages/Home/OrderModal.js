@@ -15,7 +15,7 @@ const OrderModal = ({ part, refetch, setParts }) => {
         const order = {
             orderId: _id,
             name,
-            price,
+            price: price * newQuantity,
             orderQuantity: newQuantity,
             address,
             user: user.email,
