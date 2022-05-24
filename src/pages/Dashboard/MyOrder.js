@@ -3,10 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import CancelModal from './CancelModal';
 
 const MyOrder = () => {
     const [orders, setOrders] = useState([]);
-    // const { name, _id, price, orderQuantity } = orders;
+    const [order, setOrder] = useState(null);
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
     useEffect(() => {
@@ -20,7 +21,6 @@ const MyOrder = () => {
                 .then(res => {
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth);
-                        // localStorage.removeItem('accessToken');
                         navigate('/');
                     }
                     return res.json()
@@ -28,14 +28,11 @@ const MyOrder = () => {
                 .then(data => setOrders(data))
         }
     }, [user, navigate])
-    // console.log(orders[0]._id)
 
-    const handleCancel = (id) => {
-        console.log(id)
-    }
+
     return (
         <div>
-            <h3>my order page: {orders.length}</h3>
+            <h3>my total order: {orders.length}</h3>
             <div className="overflow-x-auto">
                 <table className="table  lg:w-full">
                     <thead>
@@ -50,16 +47,22 @@ const MyOrder = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((ap, index) => <tr key={index}>
+                            orders.map((ap, index) => <tr key={ap._id}>
                                 <th>{index + 1}</th>
                                 <td>{ap.name?.slice(0, 10)}</td>
                                 <td>{ap.orderQuantity}</td>
                                 <td>{ap.price}</td>
-                                <td>{!ap?.paid && <button onClick={() => handleCancel(ap._id)} className='btn btn-xs bg-red-500 text-white'>cancel</button>}</td>
+                                <td className='card-actions'>{!ap?.paid && <button className='btn btn-xs bg-red-500 text-white cancel-modal'>
+                                    <label htmlFor="cancel-modal"
+                                        onClick={() => setOrder(ap)}
+                                    >cancel</label>
+                                </button>}</td>
                                 <td>
-                                    {(ap?.price && !ap?.paid) && <Link to={`/dashboard/payment/${ap._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
-                                    {(ap?.price && ap?.paid) && <span className=' text-success'>paid</span>}
-
+                                    {(ap.price && !ap.paid) && <Link to={`/dashboard/payment/${ap._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                                    {(ap.price && ap.paid) && <div>
+                                        <p><span className='text-success'>Paid</span></p>
+                                        {/* <p>Transaction id: <span className='text-success'>{ap?.transactionId}</span></p> */}
+                                    </div>}
                                 </td>
                             </tr>)
                         }
@@ -67,6 +70,7 @@ const MyOrder = () => {
                     </tbody>
                 </table>
             </div>
+            {order && <CancelModal order={order} setOrder={setOrder}></CancelModal>}
         </div>
     );
 };

@@ -54,7 +54,7 @@ const OrderModal = ({ part, refetch, setParts }) => {
                         <input type="email" name='email' readOnly placeholder={user?.email || ''} className="input input-bordered input-primary w-full max-w-xs" />
 
                         <input onChange={(e) => setNewQuantity(e.target.value)} type="number" name='Oquantity' min="100" max={quantity} placeholder="Order quantity, minimum 100" className="input input-bordered input-primary w-full max-w-xs" required />
-                        { }
+
 
                         <input type="text" name='address' placeholder="Your Address..." className="input input-bordered input-primary w-full max-w-xs" required />
 
