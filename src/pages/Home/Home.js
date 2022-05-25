@@ -3,6 +3,7 @@ import Footer from '../../Shared/Footer';
 import Banner from './Banner';
 import GenShow from './GenShow';
 import Parts from './Parts';
+import Reviews from './Reviews';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Banner />
             <Parts />
             <GenShow />
+            <Reviews />
             <Footer></Footer>
         </div>
     );

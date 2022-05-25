@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 const AddReviews = () => {
     const [user] = useAuthState(auth);
     const [selecto, setSelecto] = useState(2);
+    console.log(user)
 
     const handleReview = (e) => {
         e.preventDefault();
@@ -13,6 +14,7 @@ const AddReviews = () => {
         const review = {
             user: user.displayName,
             email: user.email,
+            img: user.photoURL ? user.photoURL : "https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png",
             ratings: selecto,
             description
         }
