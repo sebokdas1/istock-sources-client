@@ -37,6 +37,7 @@ const MyProfile = () => {
     }
     return (
         <div className='sm:mr-px justify-center items-center'>
+            <h2 className='text-2xl font-bold text-purple-500'>Please Update Your Profile</h2>
             <div className=''>
                 <form onSubmit={handleUpdate} >
                     <span className='grid lg:grid-cols-2'>
