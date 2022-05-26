@@ -4,7 +4,8 @@ const CancelModal = ({ order, setOrder }) => {
     const { _id, name } = order;
     const [confirm, setConfirm] = useState('');
 
-    const handleCancel = () => {
+    const handleCancel = (e) => {
+        e.preventDefault()
         const url = `http://localhost:5000/order/${_id}`;
         fetch(url, {
             method: 'DELETE',
