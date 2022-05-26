@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
+import Blogs from './pages/Blogs/Blogs';
 import AddProduct from './pages/Dashboard/AddProduct';
 import AddReviews from './pages/Dashboard/AddReviews';
 import Dashboard from './pages/Dashboard/Dashboard';
@@ -13,6 +14,7 @@ import Home from './pages/Home/Home';
 import PartDetails from './pages/Home/PartDetails';
 import Login from './pages/login/Login';
 import Register from './pages/login/Register';
+import RequireAdmin from './pages/login/RequireAdmin';
 import RequireAuth from './pages/login/RequireAuth';
 import Navbar from './Shared/Navbar';
 
@@ -22,6 +24,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        <Route path='/blogs' element={<Blogs />}></Route>
 
         <Route path='part/:id' element={
           <RequireAuth>
@@ -37,10 +40,27 @@ function App() {
           <Route index element={<MyProfile />}></Route>
           <Route path='my-order' element={<MyOrder />}></Route>
           <Route path='add-review' element={<AddReviews />}></Route>
-          <Route path='manage-order' element={<ManageAllOrder />}></Route>
-          <Route path='add-product' element={<AddProduct />}></Route>
-          <Route path='manage-product' element={<ManageProduct />}></Route>
-          <Route path='make-admin' element={<MakeAdmin />}></Route>
+          <Route path='manage-order' element={
+            <RequireAdmin>
+              <ManageAllOrder />
+            </RequireAdmin>
+          } />
+          <Route path='add-product' element={
+            <RequireAdmin>
+
+              <AddProduct />
+            </RequireAdmin>
+          } />
+          <Route path='manage-product' element={
+            <RequireAdmin>
+              <ManageProduct />
+            </RequireAdmin>
+          } />
+          <Route path='make-admin' element={
+            <RequireAdmin>
+              <MakeAdmin />
+            </RequireAdmin>
+          } />
         </Route>
 
         <Route path='login' element={<Login />}></Route>

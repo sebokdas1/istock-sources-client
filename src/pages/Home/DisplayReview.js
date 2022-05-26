@@ -19,7 +19,7 @@ const DisplayReview = ({ review }) => {
 
                     </ul>
                 </h2>
-                <p className='text-xs'>{description}</p>
+                <p className='text-xs'>{description.slice(0, 40)}</p>
                 <div class="avatar">
                     <div class="w-8 rounded-full">
                         <img src={img} alt="" />

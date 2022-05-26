@@ -52,11 +52,11 @@ const Login = () => {
     }
     return (
         <div className='grid lg:grid-cols-2 lg:mt-7'>
-            <div className='hidden lg:block'>
+            <div className='hidden lg:block mt-4'>
                 <img src="https://www.phitron.io/static/media/login.60b00691.png" alt="" />
             </div>
             <div style={{ height: '100vh' }} className='flex justify-center items-center '>
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card lg:max-w-lg bg-base-100 shadow-xl">
                     <div className="card-body">
                         <h2 className=" text-2xl font-bold">Welcome Back</h2>
 
