@@ -17,6 +17,7 @@ import Login from './pages/login/Login';
 import Register from './pages/login/Register';
 import RequireAdmin from './pages/login/RequireAdmin';
 import RequireAuth from './pages/login/RequireAuth';
+import MyPortFolio from './pages/MyPortFolio/MyPortFolio';
 import Navbar from './Shared/Navbar';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/my-portfolio' element={<MyPortFolio />}></Route>
 
         <Route path='part/:id' element={
           <RequireAuth>
