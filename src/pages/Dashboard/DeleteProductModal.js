@@ -4,7 +4,8 @@ const DeleteProductModal = ({ product, setProduct }) => {
     const { _id, name } = product;
     const [confirm, setConfirm] = useState('');
 
-    const handleCancel = () => {
+    const handleCancel = (e) => {
+        e.preventDefault()
         const url = `http://localhost:5000/part/${_id}`;
         fetch(url, {
             method: 'DELETE',

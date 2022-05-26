@@ -4,6 +4,7 @@ import './App.css';
 import AddProduct from './pages/Dashboard/AddProduct';
 import AddReviews from './pages/Dashboard/AddReviews';
 import Dashboard from './pages/Dashboard/Dashboard';
+import MakeAdmin from './pages/Dashboard/MakeAdmin';
 import ManageAllOrder from './pages/Dashboard/ManageAllOrder';
 import ManageProduct from './pages/Dashboard/ManageProduct';
 import MyOrder from './pages/Dashboard/MyOrder';
@@ -39,6 +40,7 @@ function App() {
           <Route path='manage-order' element={<ManageAllOrder />}></Route>
           <Route path='add-product' element={<AddProduct />}></Route>
           <Route path='manage-product' element={<ManageProduct />}></Route>
+          <Route path='make-admin' element={<MakeAdmin />}></Route>
         </Route>
 
         <Route path='login' element={<Login />}></Route>
