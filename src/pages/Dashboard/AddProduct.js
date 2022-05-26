@@ -32,6 +32,7 @@ const AddProduct = () => {
             .then(inserted => {
                 if (inserted.insertedId) {
                     alert('product added successfully')
+                    // reset()
                 }
 
             })
