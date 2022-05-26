@@ -20,7 +20,7 @@ const AddProduct = () => {
             price
         }
 
-        fetch('http://localhost:5000/part', {
+        fetch('https://istock-sources.herokuapp.com/part', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

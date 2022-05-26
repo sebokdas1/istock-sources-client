@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading';
 import ManageOrder from './ManageOrder';
 
 const ManageAllOrder = () => {
-    const { data: orders, isLoading } = useQuery('orders', () => fetch('http://localhost:5000/orders').then(res => res.json()));
+    const { data: orders, isLoading } = useQuery('orders', () => fetch('https://istock-sources.herokuapp.com/orders').then(res => res.json()));
 
     if (isLoading) {
         return <Loading />

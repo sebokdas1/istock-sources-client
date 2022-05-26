@@ -6,7 +6,7 @@ const RemoveUserModal = ({ rmUser, setRMUser }) => {
 
     const handleUserRemove = (e) => {
         e.preventDefault()
-        const url = `http://localhost:5000/user/admin/${email}`;
+        const url = `https://istock-sources.herokuapp.com/user/admin/${email}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

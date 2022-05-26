@@ -6,7 +6,7 @@ const DeleteProductModal = ({ product, setProduct }) => {
 
     const handleCancel = (e) => {
         e.preventDefault()
-        const url = `http://localhost:5000/part/${_id}`;
+        const url = `https://istock-sources.herokuapp.com/part/${_id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

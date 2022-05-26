@@ -6,7 +6,7 @@ const CancelModal = ({ order, setOrder }) => {
 
     const handleCancel = (e) => {
         e.preventDefault()
-        const url = `http://localhost:5000/order/${_id}`;
+        const url = `https://istock-sources.herokuapp.com/order/${_id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

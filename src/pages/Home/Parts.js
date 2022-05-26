@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading';
 import Part from './Part';
 
 const Parts = () => {
-    const { data: parts, isLoading } = useQuery('parts', () => fetch('http://localhost:5000/part').then(res => res.json()));
+    const { data: parts, isLoading } = useQuery('parts', () => fetch('https://istock-sources.herokuapp.com/part').then(res => res.json()));
 
     if (isLoading) {
         return <Loading />

@@ -6,7 +6,7 @@ import RemoveUserModal from './RemoveUserModal';
 
 const MakeAdmin = () => {
     const [rmUser, setRMUser] = useState(null);
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://istock-sources.herokuapp.com/user', {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
