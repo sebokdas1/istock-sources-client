@@ -4,6 +4,7 @@ import Banner from './Banner';
 import GenShow from './GenShow';
 import Parts from './Parts';
 import Reviews from './Reviews';
+import Summary from './Summary';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Parts />
             <GenShow />
             <Reviews />
+            <Summary />
             <Footer></Footer>
         </div>
     );
