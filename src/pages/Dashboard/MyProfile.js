@@ -38,7 +38,7 @@ const MyProfile = () => {
     return (
         <div className='sm:mr-px justify-center items-center'>
             <h2 className='text-2xl font-bold text-purple-500'>Please Update Your Profile</h2>
-            <div className=''>
+            <div className='w-2/3 mx-auto mt-4'>
                 <form onSubmit={handleUpdate} >
                     <span className='grid lg:grid-cols-2'>
                         <label class="block">

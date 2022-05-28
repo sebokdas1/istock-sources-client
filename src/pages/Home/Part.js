@@ -15,14 +15,14 @@ const Part = ({ part }) => {
             </figure>
             <div class="card-body">
                 <h2 class="card-title">{name?.slice(0, 20)}</h2>
-                <p className='text-sm'><span className='text-orange-700 font-bold'>Price: ${price}</span><small className='text-lime-600'>(per unit price)</small></p>
+                <p className='text-sm'><span className='text-orange-500 font-bold'>Price: ${price}</span><small className='text-lime-600'>(per unit price)</small></p>
 
 
                 <div className='grid grid-cols-2 justify-between'>
                     <p className='text-sm text-green-600'>Stock: {quantity}</p>
                     <p className='text-red-500 text-sm'>Min Order: 100</p>
                 </div>
-                <p className='text-xs'>{discription?.slice(0, 100)}</p>
+                <p className='text-sm text-slate-500'>{discription?.slice(0, 100)}</p>
                 <div class="card-actions">
                     <button onClick={() => navigateOrder(_id)} class="btn btn-primary text-white">Order</button>
                 </div>

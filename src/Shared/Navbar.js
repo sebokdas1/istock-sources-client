@@ -22,7 +22,7 @@ const Navbar = () => {
         <li className='lg:text-white'>{user ? <button className="btn btn-ghost" onClick={logOut}>Sign Out</button> : <Link to="/login">Login</Link>}</li>
     </>
     return (
-        <div className="navbar bg-cyan-500 shadow-lg">
+        <div className="navbar bg-cyan-500 shadow-lg ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
