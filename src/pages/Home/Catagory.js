@@ -5,7 +5,7 @@ const Catagory = () => {
         <div className='mt-5'>
             <h2 className='text-center font-bold text-2xl'>Featured Category</h2>
             <h4 className='text-center'>Get Your Desired Product from Featured Category!</h4>
-            <div className='grid lg:grid-cols-8 grid-cols-4 gap-2'>
+            <div className='grid lg:grid-cols-8 grid-cols-4 gap-2 lg:pt-12'>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
                         <div class="avatar">

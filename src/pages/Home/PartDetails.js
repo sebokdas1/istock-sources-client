@@ -17,7 +17,7 @@ const PartDetails = () => {
         <div className='lg:px-12'>
 
 
-            <div class="card lg:card-side bg-base-100 shadow-xl">
+            <div class="card lg:card-side bg-base-100 ">
                 <figure><img src={part?.img} alt="Album" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">{part?.name}</h2>
