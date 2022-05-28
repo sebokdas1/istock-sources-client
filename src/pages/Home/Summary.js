@@ -7,7 +7,7 @@ const Summary = () => {
         <div className='mt-7 '>
             <h2 className='text-center uppercase font-bold text-green-500 text-3xl'>millions business Trust Us</h2>
             <h4 className='text-center uppercase font-bold text-green-400'>try to understand users expectation</h4>
-            <div className='flex justify-center'>
+            <div className='flex justify-center lg:py-12'>
                 <div class="lg:stats shadow gap-5">
 
                     <div class="stat lg:mr-4">
