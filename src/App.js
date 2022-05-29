@@ -22,7 +22,7 @@ import Navbar from './Shared/Navbar';
 
 function App() {
   return (
-    <div className='lg:max-w-7xl mx-auto'>
+    <div className=' mx-auto'>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home />}></Route>
