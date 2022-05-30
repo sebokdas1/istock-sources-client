@@ -6,10 +6,10 @@ const DisplayReview = ({ review }) => {
     const { ratings, user, description, img } = review;
     console.log(ratings)
     return (
-        <div class="card   shadow-xl">
+        <div class="card   shadow-xl w-full">
             <div class="card-body">
-                <h2 class="card-title">
-                    <ul className='flex'>
+                <h2 class="card-title grid justify-center">
+                    <ul className='flex '>
 
                         <li className={ratings < 1 ? 'hidden' : 'text-orange-500'} ><FontAwesomeIcon icon={faStar} /></li>
                         <li className={ratings < 2 ? 'hidden' : 'text-orange-500'} ><FontAwesomeIcon icon={faStar} /></li>
@@ -20,13 +20,14 @@ const DisplayReview = ({ review }) => {
                     </ul>
                 </h2>
                 <p className='text-xs'>{description.slice(0, 40)}</p>
-                <div class="avatar">
-                    <div class="w-8 rounded-full">
-                        <img src={img} alt="" />
+                <div>
+                    <div class="avatar">
+                        <div class="w-8 rounded-full text-center">
+                            <img src={img} alt="" />
+                        </div>
                     </div>
+                    <h6 className='font-bold'>{user}</h6>
                 </div>
-                <h6 className='font-bold'>{user}</h6>
-
             </div>
         </div>
     );

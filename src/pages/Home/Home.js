@@ -14,8 +14,8 @@ const Home = () => {
             <Parts />
             <GenShow />
             <Summary />
-            <Catagory />
             <Reviews />
+            <Catagory />
             <Footer></Footer>
         </div>
     );
