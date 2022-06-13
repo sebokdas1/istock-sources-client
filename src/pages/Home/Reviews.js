@@ -20,7 +20,7 @@ const Reviews = () => {
 
         <div className='mt-12 mb-12'>
             <>
-                <h1 className='text-center text-indigo-500 font-bold text-3xl lg:mt-4 uppercase'>Coustomer REVIEWS</h1>
+                <h1 className='text-center text-indigo-500 font-bold text-3xl lg:mt-4 lg:mb-6 uppercase'>Coustomer REVIEWS</h1>
                 <Swiper
                     slidesPerView={10}
                     spaceBetween={5}
