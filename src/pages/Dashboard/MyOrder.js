@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import CancelModal from './CancelModal';
 
@@ -29,9 +29,9 @@ const MyOrder = () => {
         }
     }, [user, navigate])
 
-    const handlePay = () => {
-        alert('server is down! please try latter')
-    }
+    // const handlePay = () => {
+    //     alert('server is down! please try latter')
+    // }
 
 
     return (
@@ -62,7 +62,8 @@ const MyOrder = () => {
                                     >cancel</label>
                                 </button>}</td>
                                 <td>
-                                    {(ap.price && !ap.paid) && <button onClick={handlePay} className='btn btn-xs btn-success'>pay</button>}
+                                    {(ap.price && !ap.paid) && <Link to={`/dashboard/payment/${ap._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
+                                    {(ap.price && ap.paid) && <span className=' text-success'>paid</span>}
                                 </td>
                             </tr>)
                         }
