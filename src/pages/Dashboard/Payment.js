@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L0gJvIQnceSNo7BgQ3yMPfxaCnTGk52gUrBR
 
 const Payment = () => {
     const { id } = useParams()
-    const url = `http://localhost:5000/orders/${id}`
+    const url = `https://istock-sources.herokuapp.com/orders/${id}`
     const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
         headers: {

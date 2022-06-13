@@ -8,12 +8,13 @@ const CheckoutForm = ({ order }) => {
     const elements = useElements()
     const [cardError, setCardError] = useState('')
     const [success, setsuccess] = useState('')
+    const [proccessing, setProccessing] = useState(false)
     const [trxId, setTrxId] = useState('')
     const [clientSecret, setClientSecret] = useState('')
-    const { price, user, userName } = order;
+    const { _id, price, user, userName } = order;
     // console.log(order)
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://istock-sources.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -50,6 +51,7 @@ const CheckoutForm = ({ order }) => {
         } else {
             setCardError('')
         }
+        setProccessing(true)
         const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
             clientSecret,
             {
@@ -64,11 +66,31 @@ const CheckoutForm = ({ order }) => {
         );
         if (intentError) {
             setCardError(intentError?.message)
+            setProccessing(false)
         } else {
             setCardError('')
             // console.log(paymentIntent)
             setTrxId(paymentIntent.id)
+
             setsuccess('Your payment is completed')
+
+            //store on database
+            const payment = {
+                order: _id,
+                trxId: paymentIntent.id
+            }
+            fetch(`https://istock-sources.herokuapp.com/order/${_id}`, {
+                method: 'PATCH',
+                headers: {
+                    'content-type': 'application/json',
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                },
+                body: JSON.stringify(payment)
+            }).then(res => res.json())
+                .then(data => {
+                    setProccessing(false)
+                    console.log(data)
+                })
         }
     }
     return (
