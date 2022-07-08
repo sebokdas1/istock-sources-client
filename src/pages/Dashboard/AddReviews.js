@@ -5,7 +5,6 @@ import auth from '../../firebase.init';
 const AddReviews = () => {
     const [user] = useAuthState(auth);
     const [selecto, setSelecto] = useState(2);
-    console.log(user)
 
     const handleReview = (e) => {
         e.preventDefault();

@@ -4,7 +4,6 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const DisplayReview = ({ review }) => {
     const { ratings, user, description, img } = review;
-    console.log(ratings)
     return (
         <div class="card   shadow-xl w-full">
             <div class="card-body">

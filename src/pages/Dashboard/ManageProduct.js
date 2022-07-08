@@ -14,7 +14,6 @@ const ManageProduct = () => {
     if (isLoading) {
         return <Loading />
     }
-    console.log(parts.length)
     return (
         <div>
             <h2 className='text-2xl font-bold text-purple-500'>Manage your all Products</h2>

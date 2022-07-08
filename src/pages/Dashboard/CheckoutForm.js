@@ -69,7 +69,6 @@ const CheckoutForm = ({ order }) => {
             setProccessing(false)
         } else {
             setCardError('')
-            // console.log(paymentIntent)
             setTrxId(paymentIntent.id)
 
             setsuccess('Your payment is completed')
