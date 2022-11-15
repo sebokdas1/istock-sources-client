@@ -8,8 +8,8 @@ const Catagory = () => {
             <div className='grid lg:grid-cols-8 grid-cols-4 gap-2 lg:pt-12'>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/laptop-48x48.png' alt="" />
                             </div>
                         </div>
@@ -18,8 +18,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/desktop-48x48.png' alt="" />
                             </div>
                         </div>
@@ -28,8 +28,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/cpu-48x48.png' alt="" />
                             </div>
                         </div>
@@ -38,8 +38,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/gpu-48x48.png' alt="" />
                             </div>
                         </div>
@@ -48,8 +48,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/SSD-48x48.png' alt="" />
                             </div>
                         </div>
@@ -58,8 +58,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/keyboard-48x48.png' alt="" />
                             </div>
                         </div>
@@ -68,8 +68,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/accessories-48x48.png' alt="" />
                             </div>
                         </div>
@@ -78,8 +78,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/headphone-48x48.png' alt="" />
                             </div>
                         </div>
@@ -88,8 +88,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/webcam-48x48.png' alt="" />
                             </div>
                         </div>
@@ -98,8 +98,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/printer-48x48.png' alt="" />
                             </div>
                         </div>
@@ -108,8 +108,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/projector-48x48.png' alt="" />
                             </div>
                         </div>
@@ -118,8 +118,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/router-48x48.png' alt="" />
                             </div>
                         </div>
@@ -128,8 +128,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/studio-equipment-48x48-48x48.png' alt="" />
                             </div>
                         </div>
@@ -138,8 +138,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/gadget-48x48.png' alt="" />
                             </div>
                         </div>
@@ -148,8 +148,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/smart-watch-48x48.png' alt="" />
                             </div>
                         </div>
@@ -158,8 +158,8 @@ const Catagory = () => {
                 </div>
                 <div className='card shadow-xl mt-2'>
                     <div className='card-body items-center'>
-                        <div class="avatar">
-                            <div class="w-8 rounded">
+                        <div className="avatar">
+                            <div className="w-8 rounded">
                                 <img src='https://www.startech.com.bd/image/cache/catalog/category-thumb/cable-converter-48x48.png' alt="" />
                             </div>
                         </div>

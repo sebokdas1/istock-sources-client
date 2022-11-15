@@ -4,15 +4,15 @@ const Blogs = () => {
     return (
         <div>
             <h2 className='text-3xl text-center uppercase font-bold  text-blue-400'>Blogs</h2>
-            <div class="card  bg-base-100 shadow-xl">
-                <div class="card-body">
+            <div className="card  bg-base-100 shadow-xl">
+                <div className="card-body">
                     <div className='collapse collapse-arrow'>
                         <input type="checkbox" />
-                        <div class="collapse-title ">
-                            <h1 class="text-3xl font-bold text-green-600">How will you improve the performance of a React Application?</h1>
+                        <div className="collapse-title ">
+                            <h1 className="text-3xl font-bold text-green-600">How will you improve the performance of a React Application?</h1>
                         </div>
-                        <div class="collapse-content">
-                            <h2 class="card-title">1. Keeping component state local where necessary</h2>
+                        <div className="collapse-content">
+                            <h2 className="card-title">1. Keeping component state local where necessary</h2>
                             <p>We've learned that a state update in a parent component re-renders the parent and its child components.</p>
                             <h2 className='card-title'>2. Memoizing React components to prevent unnecessary re-renders</h2>
                             <p>Unlike the previous performance technique where refactoring our code gives us a performance boost, here we trade memory space for time. So, we must only memoize a component when necessary.</p>
@@ -29,8 +29,8 @@ const Blogs = () => {
                 <div className='card-body'>
                     <div className='collapse collapse-arrow'>
                         <input type="checkbox" />
-                        <div class="collapse-title ">
-                            <h1 class="text-3xl font-bold text-green-600">What are the different ways to manage a state in a React application?</h1>
+                        <div className="collapse-title ">
+                            <h1 className="text-3xl font-bold text-green-600">What are the different ways to manage a state in a React application?</h1>
                         </div>
                         <div className='collapse-content'>
                             <h2 className='card-title'>The Four Kinds of React State to Manage</h2>
@@ -64,8 +64,8 @@ const Blogs = () => {
                 <div className='card-body'>
                     <div className='collapse collapse-arrow'>
                         <input type="checkbox" />
-                        <div class="collapse-title ">
-                            <h1 class="text-3xl font-bold text-green-600">How does prototypical inheritance work?</h1>
+                        <div className="collapse-title ">
+                            <h1 className="text-3xl font-bold text-green-600">How does prototypical inheritance work?</h1>
                         </div>
                         <div className='collapse-content'>
                             <h2 className='card-title'>Prototypal inheritance</h2>
@@ -81,8 +81,8 @@ const Blogs = () => {
                 <div className='card-body'>
                     <div className='collapse collapse-arrow'>
                         <input type="checkbox" />
-                        <div class="collapse-title ">
-                            <h1 class="text-3xl font-bold text-green-600"> Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts</h1>
+                        <div className="collapse-title ">
+                            <h1 className="text-3xl font-bold text-green-600"> Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts</h1>
                         </div>
                         <div className='collapse-content'>
                             <h2 className='card-title'></h2>
@@ -95,8 +95,8 @@ const Blogs = () => {
                 <div className='card-body'>
                     <div className='collapse collapse-arrow'>
                         <input type="checkbox" />
-                        <div class="collapse-title ">
-                            <h1 class="text-3xl font-bold text-green-600">What is a unit test? Why should write unit tests?</h1>
+                        <div className="collapse-title ">
+                            <h1 className="text-3xl font-bold text-green-600">What is a unit test? Why should write unit tests?</h1>
                         </div>
                         <div className='collapse-content'>
                             <h2 className='card-title'>What is unit test?</h2>
@@ -112,8 +112,8 @@ const Blogs = () => {
                 <div className='card-body'>
                     <div className='collapse collapse-arrow'>
                         <input type="checkbox" />
-                        <div class="collapse-title ">
-                            <h1 class="text-3xl font-bold text-green-600">You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h1>
+                        <div className="collapse-title ">
+                            <h1 className="text-3xl font-bold text-green-600">You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h1>
                         </div>
                         <div className='collapse-content'>
                             <h2 className='card-title'></h2>

@@ -15,7 +15,7 @@ const ManageAllOrder = () => {
             <div className='overflow-x-auto'>
 
 
-                <table class="table lg:w-full">
+                <table className="table lg:w-full">
                     <thead>
                         <tr>
                             <th>Parts</th>

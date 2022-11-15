@@ -2,10 +2,8 @@ import React from 'react';
 
 const GenShow = () => {
     return (
-        <div className='grid lg:grid-cols-2 gap-2 mt-4'>
-            <div> <img className="hover:scale-y-95 cursor-pointer" src="https://www.skyland.com.bd/wp-content/uploads/Asus-z690-Series-Motheboard.jpg" alt="" /></div>
+        <div className='grid lg:grid-cols-2 gap-2 mt-5'>
 
-            <div> <img className="hover:scale-y-95 cursor-pointer" src="https://www.skyland.com.bd/wp-content/uploads/Gigabyte-Z690-Series-Motheboard.jpg" alt="" /></div>
 
             <div> <img className="hover:scale-y-95 cursor-pointer" src="https://www.skyland.com.bd/wp-content/uploads/intel-12th-gen-processor-1.jpg" alt="" /></div>
 

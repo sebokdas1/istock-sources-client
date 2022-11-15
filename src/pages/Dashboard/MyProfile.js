@@ -41,53 +41,53 @@ const MyProfile = () => {
             <div className='w-2/3 mx-auto mt-4'>
                 <form onSubmit={handleUpdate} >
                     <span className='grid lg:grid-cols-2'>
-                        <label class="block">
-                            <span class=" after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                        <label className="block">
+                            <span className=" after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
                                 Name
                             </span>
-                            <input type="text" name="name" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder={user.displayName} />
+                            <input type="text" name="name" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder={user.displayName} />
                         </label>
 
-                        <label class="block">
-                            <span class=" after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                        <label className="block">
+                            <span className=" after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
                                 Email
                             </span>
-                            <input type="email" name="email" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder={user.email} />
+                            <input type="email" name="email" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder={user.email} />
                         </label>
 
-                        <label class="block">
+                        <label className="block">
                             <span className="after:content-['*'] after:ml-0.5 after:text-red-500 text-sm font-medium text-slate-700">
                                 Education
                             </span>
-                            <input required type="text" name="education" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="BBA/MBAschool/college/university" />
+                            <input required type="text" name="education" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="BBA/MBAschool/college/university" />
                         </label>
 
-                        <label class="block">
-                            <span class="after:content-['*'] after:ml-0.5 after:text-red-500 text-sm font-medium text-slate-700">
+                        <label className="block">
+                            <span className="after:content-['*'] after:ml-0.5 after:text-red-500 text-sm font-medium text-slate-700">
                                 Location
                             </span>
-                            <input required type="text" name="location" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="City, Country" />
+                            <input required type="text" name="location" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="City, Country" />
                         </label>
 
-                        <label class="block">
-                            <span class="after:content-['*'] after:ml-0.5 after:text-red-500 text-sm font-medium text-slate-700">
+                        <label className="block">
+                            <span className="after:content-['*'] after:ml-0.5 after:text-red-500 text-sm font-medium text-slate-700">
                                 Phone Number
                             </span>
-                            <input required type="text" name="phone" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="01*****" />
+                            <input required type="text" name="phone" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="01*****" />
                         </label>
 
-                        <label class="block">
-                            <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                        <label className="block">
+                            <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
                                 Linekedin
                             </span>
-                            <input required type="text" name="linkedin" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="linkedin profile link" />
+                            <input required type="text" name="linkedin" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="linkedin profile link" />
                         </label>
 
-                        <label class="block">
-                            <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+                        <label className="block">
+                            <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
                                 Photo URL
                             </span>
-                            <input required type="text" name="photo" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="photo link" />
+                            <input required type="text" name="photo" className="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md sm:text-sm focus:ring-1" placeholder="photo link" />
                         </label>
                     </span>
                     <input type="submit" value="update profile" className='btn btn-primary  mt-3 text-white' />

@@ -28,11 +28,11 @@ const MakingAdmin = ({ user, index, refetch, setRMUser }) => {
             <th>{index + 1}</th>
             <td>{email}</td>
             <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs text-white">Make Admin</button>}</td>
-            <td className='card-actions'><button className='btn btn-xs bg-red-500 text-white delete-modal'>
-                <label htmlFor="user-delete-modal"
+            <td className='card-actions'>
+                <label className='btn btn-xs bg-red-500 text-white' htmlFor="user-delete-modal"
                     onClick={() => setRMUser(user)}
                 >remove</label>
-            </button></td>
+            </td>
         </tr>
     );
 };

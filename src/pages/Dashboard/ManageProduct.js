@@ -16,8 +16,8 @@ const ManageProduct = () => {
     }
     return (
         <div>
-            <h2 className='text-2xl font-bold text-purple-500'>Manage your all Products</h2>
-            <div className="overflow-x-auto">
+            <h2 className='text-2xl mt-3 font-bold text-purple-500'>Manage your all Products</h2>
+            <div className="overflow-x-auto mt-2">
                 <table className="table  lg:w-full">
                     <thead>
                         <tr>
@@ -30,16 +30,16 @@ const ManageProduct = () => {
                     </thead>
                     <tbody>
                         {
-                            parts.map((ap, index) => <tr key={ap._id}>
+                            parts?.map((ap, index) => <tr key={ap._id}>
                                 <th>{index + 1}</th>
                                 <td>{ap.name?.slice(0, 10)}</td>
                                 <td>{ap.quantity}</td>
                                 <td>{ap.price}</td>
-                                <td className='card-actions'><button className='btn btn-xs bg-red-500 text-white delete-modal'>
-                                    <label htmlFor="delete-modal"
+                                <td className='card-actions'>
+                                    <label className='btn btn-xs bg-red-500 text-white delete-modal' htmlFor="delete-modal"
                                         onClick={() => setProduct(ap)}
                                     >delete</label>
-                                </button></td>
+                                </td>
                             </tr>)
                         }
 
