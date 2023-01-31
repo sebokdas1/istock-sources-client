@@ -20,7 +20,7 @@ const AddProduct = () => {
             price
         }
 
-        fetch('https://istock-sources.herokuapp.com/part', {
+        fetch('https://istock-sources-server.vercel.app/part', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

@@ -4,7 +4,7 @@ const MakingAdmin = ({ user, index, refetch, setRMUser }) => {
     const { email, role } = user;
 
     const makeAdmin = () => {
-        fetch(`https://istock-sources.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://istock-sources-server.vercel.app/user/admin/${email}`, {
             method: "PUT",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

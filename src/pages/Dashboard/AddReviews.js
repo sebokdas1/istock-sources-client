@@ -18,7 +18,7 @@ const AddReviews = () => {
             description
         }
 
-        fetch('https://istock-sources.herokuapp.com/review', {
+        fetch('https://istock-sources-server.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

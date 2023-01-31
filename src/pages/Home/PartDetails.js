@@ -7,7 +7,7 @@ import OrderModal from './OrderModal';
 const PartDetails = () => {
     const [parts, setParts] = useState(null);
     const { id } = useParams();
-    const url = `https://istock-sources.herokuapp.com/order/${id}`;
+    const url = `https://istock-sources-server.vercel.app/order/${id}`;
     const { data: part, isLoading, refetch } = useQuery(['order', id], () => fetch(url).then(res => res.json()))
     if (isLoading) {
         return <Loading />

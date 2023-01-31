@@ -14,7 +14,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, price, user, userName } = order;
     // console.log(order)
     useEffect(() => {
-        fetch('https://istock-sources.herokuapp.com/create-payment-intent', {
+        fetch('https://istock-sources-server.vercel.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -78,7 +78,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 trxId: paymentIntent.id
             }
-            fetch(`https://istock-sources.herokuapp.com/order/${_id}`, {
+            fetch(`https://istock-sources-server.vercel.app/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

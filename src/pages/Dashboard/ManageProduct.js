@@ -5,7 +5,7 @@ import DeleteProductModal from './DeleteProductModal';
 
 const ManageProduct = () => {
     const [product, setProduct] = useState(null);
-    const { data: parts, isLoading } = useQuery('parts', () => fetch('https://istock-sources.herokuapp.com/part', {
+    const { data: parts, isLoading } = useQuery('parts', () => fetch('https://istock-sources-server.vercel.app/part', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

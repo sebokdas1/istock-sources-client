@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 const Reviews = () => {
-    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://istock-sources.herokuapp.com/review').then(res => res.json()));
+    const { data: reviews, isLoading } = useQuery('reviews', () => fetch('https://istock-sources-server.vercel.app/review').then(res => res.json()));
 
     if (isLoading) {
         return <Loading />

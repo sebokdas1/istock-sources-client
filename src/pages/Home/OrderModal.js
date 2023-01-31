@@ -23,7 +23,7 @@ const OrderModal = ({ part, refetch, setParts }) => {
             phone: e.target.phone.value
         }
 
-        fetch('https://istock-sources.herokuapp.com/order', {
+        fetch('https://istock-sources-server.vercel.app/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
