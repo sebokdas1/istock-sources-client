@@ -6,7 +6,7 @@ const useToken = user => {
         const email = user?.user?.email;
         const currentUser = { email: email };
         if (email) {
-            fetch(`https://istock-sources-server.vercel.app/user/${email}`, {
+            fetch(`https://istock-sources-server.onrender.com/user/${email}`, {
                 method: "PUT",
                 headers: {
                     'content-type': 'application/json'

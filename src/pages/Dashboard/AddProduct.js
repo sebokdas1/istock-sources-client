@@ -20,7 +20,7 @@ const AddProduct = () => {
             price
         }
 
-        fetch('https://istock-sources-server.vercel.app/part', {
+        fetch('https://istock-sources-server.onrender.com/part', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

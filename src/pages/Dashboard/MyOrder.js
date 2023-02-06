@@ -12,7 +12,7 @@ const MyOrder = () => {
     const navigate = useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(`https://istock-sources-server.vercel.app/order?user=${user.email}`, {
+            fetch(`https://istock-sources-server.onrender.com/order?user=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

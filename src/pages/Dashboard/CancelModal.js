@@ -6,7 +6,7 @@ const CancelModal = ({ order, setOrder }) => {
 
     const handleCancel = (e) => {
         e.preventDefault()
-        const url = `https://istock-sources-server.vercel.app/order/${_id}`;
+        const url = `https://istock-sources-server.onrender.com/order/${_id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

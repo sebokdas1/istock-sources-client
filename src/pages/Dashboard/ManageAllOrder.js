@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading';
 import ManageOrder from './ManageOrder';
 
 const ManageAllOrder = () => {
-    const { data: orders, isLoading } = useQuery('orders', () => fetch('https://istock-sources-server.vercel.app/orders').then(res => res.json()));
+    const { data: orders, isLoading } = useQuery('orders', () => fetch('https://istock-sources-server.onrender.com/orders').then(res => res.json()));
 
     if (isLoading) {
         return <Loading />

@@ -6,7 +6,7 @@ const DeleteProductModal = ({ product, setProduct }) => {
 
     const handleCancel = (e) => {
         e.preventDefault()
-        const url = `https://istock-sources-server.vercel.app/part/${_id}`;
+        const url = `https://istock-sources-server.onrender.com/part/${_id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {
