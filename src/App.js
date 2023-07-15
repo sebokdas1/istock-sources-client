@@ -33,7 +33,7 @@ function App() {
         <Route path="/my-portfolio" element={<MyPortFolio />}></Route>
 
         <Route
-          path="part/:id"
+          path="/part/:id"
           element={
             <RequireAuth>
               <PartDetails />
