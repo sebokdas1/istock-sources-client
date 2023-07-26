@@ -1,18 +1,8 @@
 import React from "react";
-import { useQuery } from "react-query";
-import Loading from "../../Shared/Loading";
 import Part from "./Part";
 import useParts from "../../Shared/useParts";
 
 const AllParts = () => {
-  // const { data: parts, isLoading } = useQuery("parts", () =>
-  //   fetch("https://istock-sources-server.onrender.com/part").then((res) =>
-  //     res.json()
-  //   )
-  // );
-  // if (isLoading) {
-  //   return <Loading />;
-  // }
   const [parts] = useParts([]);
   return (
     <div className="lg:px-12">
