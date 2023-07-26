@@ -4,11 +4,32 @@ import auth from "../../firebase.init";
 // import Loading from "../../Shared/Loading";
 import { AiOutlineMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FaRegEdit } from "react-icons/fa";
+import { useQuery } from "react-query";
+import Loading from "../../Shared/Loading";
 
 const MyProfile = () => {
   const [user] = useAuthState(auth);
   //   const [updateProfile, updating, error] = useUpdateProfile(auth);
   const [updateAvailable, setupdateAvailable] = useState(false);
+
+  const {
+    data: users,
+    isLoading,
+    refetch,
+  } = useQuery("users", () =>
+    fetch("https://istock-sources-server.onrender.com/user", {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    }).then((res) => res.json())
+  );
+  console.log(users);
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  const currentUser = users.filter((userr) => userr.email === user.email);
 
   const me = {
     displayName: "Sebok Das",
@@ -29,6 +50,15 @@ const MyProfile = () => {
     const github = data.target.github.value;
     const photo = data.target.photo.value;
 
+    // fetch("http://localhost:5000/user", {
+    //   method: "GET",
+    //   headers: {
+    //     authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+    //   },
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => setUsers(data));
+
     const newUserDetails = {
       displayName: newName ? newName : me.displayName,
       photoURL: photo ? photo : me.photoURL,
@@ -39,16 +69,30 @@ const MyProfile = () => {
       github: github ? github : me.github,
     };
 
+    fetch(`http://localhost:5000/user/${currentUser.email}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+      body: JSON.stringify(newUserDetails),
+    })
+      .then((res) => {
+        if (res.status === 403) {
+          alert(`Failed to update profile`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          refetch();
+          alert(`successfully update profile`);
+        }
+      });
+
     setupdateAvailable(false);
-    console.log(newUserDetails);
+    // console.log(newUserDetails);
   };
 
-  //   if (updating) {
-  //     return <Loading />;
-  //   }
-  //   if (error) {
-  //     console.log(error);
-  //   }
   return (
     <div>
       <div className="lg:flex  w-[90%] mx-auto gap-4 items-center">
