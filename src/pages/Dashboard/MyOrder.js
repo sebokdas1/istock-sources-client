@@ -33,10 +33,6 @@ const MyOrder = () => {
     }
   }, [user, navigate]);
 
-  // const handlePay = () => {
-  //     alert('server is down! please try latter')
-  // }
-
   return (
     <div>
       <h2 className="text-2xl font-bold text-purple-500">
