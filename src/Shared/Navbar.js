@@ -22,7 +22,7 @@ const Navbar = () => {
       </li>
       <li className="lg:text-white">
         {/* <Link to="/my-portfolio">My Portfolio</Link> */}
-        <a href="https://sebokdas-33115.web.app" target="_blank">
+        <a href="https://sebok.netlify.app/" target="_blank">
           My Portfolio
         </a>
       </li>
