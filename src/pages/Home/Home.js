@@ -10,7 +10,7 @@ import Summary from "./Summary";
 const Home = () => {
   return (
     <div className="lg:px-12">
-      {/* <Banner /> */}
+      <Banner />
       <Parts />
       <GenShow />
       <Summary />

@@ -18,15 +18,10 @@ const Banner = () => {
   }, [images.length]);
   return (
     <div className="mt-3">
-      {/* <img
-        style={{ borderRadius: "5px", width: "100%", height: "80vh" }}
-        src="https://i.ibb.co/kSjrrsd/computer.png"
-        alt=""
-      /> */}
       <img
-        className="w-[100%] h-[60vh]"
-        src={images[currentImage]}
-        alt={`Image ${currentImage + 1}`}
+        style={{ borderRadius: "5px", width: "100%", height: "80vh" }}
+        src="https://i.ibb.co/J24XZRg/msi-gaming-accessories-general-20200212-banner-01-640.jpg"
+        alt=""
       />
     </div>
   );
