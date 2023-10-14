@@ -21,10 +21,7 @@ const Navbar = () => {
         <Link to="/blogs">Blogs</Link>
       </li>
       <li className="lg:text-white">
-        {/* <Link to="/my-portfolio">My Portfolio</Link> */}
-        <a href="https://sebok.netlify.app/" target="_blank">
-          My Portfolio
-        </a>
+        <Link to="/my-portfolio">Portfolio</Link>
       </li>
       {user && (
         <li className="lg:text-white">

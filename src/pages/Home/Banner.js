@@ -1,21 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Banner = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const images = [
-    "https://i.ibb.co/kSjrrsd/computer.png",
-    "https://i.ibb.co/ZKHcVbC/2nd.png",
-    "https://i.ibb.co/DQRL07X/3rd.png",
-  ];
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 3000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [images.length]);
   return (
     <div className="mt-3">
       <img
