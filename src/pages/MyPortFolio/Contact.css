@@ -1,0 +1,46 @@
+.contact_personalDit {
+  background-color: transparent;
+  background-image: linear-gradient(225deg, #ffffff 0%, #e7ecef 100%);
+  box-shadow: 0px 0px 10px 0px rgba(173, 172, 172, 0.5);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  /* margin: 0px 25px 0px 0px; */
+  --e-column-margin-right: 25px;
+  --e-column-margin-left: 0px;
+  padding: 30px 30px 30px 30px;
+  border-radius: 20px;
+}
+.contact_inputs {
+  background-color: transparent;
+  background-image: linear-gradient(225deg, #ffffff 0%, #e7ecef 100%);
+  box-shadow: 0px 0px 10px 0px rgba(173, 172, 172, 0.5);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  /* margin: 0px 10px 0px 10px; */
+  --e-column-margin-right: 10px;
+  --e-column-margin-left: 10px;
+  padding: 30px 30px 30px 30px;
+  border-radius: 20px;
+}
+
+.input_styles {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.input_submit {
+  background: #7158e2 none repeat scroll 0 0;
+  border: 1px solid #7158e2;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px;
+  transition: all 0.5s ease 0s;
+  width: 200px;
+}
+.input_submit:hover {
+  background: #111 none repeat scroll 0 0;
+  border: 1px solid #111;
+}

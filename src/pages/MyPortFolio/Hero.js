@@ -1,5 +1,6 @@
 import React from "react";
 import Heroo from "../../Assets/Sebok Das cs.gif";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (

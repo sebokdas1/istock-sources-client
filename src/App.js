@@ -21,6 +21,7 @@ import RequireAuth from "./pages/login/RequireAuth";
 import MyPortFolio from "./pages/MyPortFolio/MyPortFolio";
 import Navbar from "./Shared/Navbar";
 import AllParts from "./pages/Home/AllParts";
+import Contact from "./pages/MyPortFolio/contact";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/all-parts" element={<AllParts />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/my-portfolio" element={<MyPortFolio />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
 
         <Route
           path="/part/:id"
