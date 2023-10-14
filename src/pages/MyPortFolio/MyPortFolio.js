@@ -4,6 +4,8 @@ import "./MyPortfolio.css";
 import Aboutme from "./Aboutme";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
+import Testimonial from "./Testimonial";
+import Contact from "./Contact";
 
 const MyPortFolio = () => {
   return (
@@ -13,6 +15,8 @@ const MyPortFolio = () => {
         <Aboutme />
         <Services />
         <Portfolio />
+        <Testimonial />
+        <Contact />
       </div>
     </div>
   );
