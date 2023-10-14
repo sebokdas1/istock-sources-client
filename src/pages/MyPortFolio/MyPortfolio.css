@@ -1,0 +1,33 @@
+.about_success {
+  padding: 30px 25px 10px 25px;
+  background-color: transparent;
+  background-image: linear-gradient(225deg, #ffffff 0%, #e6ebee 100%);
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 0px 10px 0px rgba(172.5, 172.125, 172.125, 0.5);
+}
+
+.psdToHtml {
+  background-color: transparent;
+  background-image: linear-gradient(225deg, #ffffff 0%, #e7ecef 100%);
+  box-shadow: 0px 0px 10px 0px rgba(173, 172, 172, 0.5);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 25px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+}
+/* .psdToHtml{
+      box-shadow: 0px 0px 10px 0px rgba(173, 172, 172, 0.5);
+      transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+      padding: 25px 20px 20px 20px;
+  } */
+
+.portfolio_projects {
+  background-color: transparent;
+  background-image: linear-gradient(225deg, #ffffff 0%, #e7ecef 100%);
+  box-shadow: 0px 0px 10px 0px rgba(173, 172, 172, 0.5);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  /* margin: 0px 10px 0px 0px; */
+  --e-column-margin-right: 10px;
+  --e-column-margin-left: 0px;
+  padding: 25px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+}

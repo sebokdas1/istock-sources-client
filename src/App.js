@@ -21,7 +21,7 @@ import RequireAuth from "./pages/login/RequireAuth";
 import MyPortFolio from "./pages/MyPortFolio/MyPortFolio";
 import Navbar from "./Shared/Navbar";
 import AllParts from "./pages/Home/AllParts";
-import Contact from "./pages/MyPortFolio/contact";
+import Contact from "./pages/MyPortFolio/Contact";
 
 function App() {
   return (

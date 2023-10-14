@@ -1,6 +1,7 @@
 import React from "react";
 import Heroo from "../../Assets/Sebok Das cs.gif";
 import { Link } from "react-router-dom";
+import "./MyPortfolio.css";
 
 const Hero = () => {
   return (
@@ -25,7 +26,7 @@ const Hero = () => {
         </p>
         <div className="flex gap-[30px]">
           <Link
-            to="contact"
+            to="/contact"
             className="text-[18px] font-bold bg-[#735BE2] hover:bg-[#262626] text-white py-[15px] px-[30px]"
           >
             HIRE ME
