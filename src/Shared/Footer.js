@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const today = new Date();
@@ -22,9 +23,9 @@ const Footer = () => {
           >
             About us
           </a>
-          <a className="link link-hover" href="mailto:sebok.das66@gmail.com">
+          <Link to="/contact" className="link link-hover">
             Contact
-          </a>
+          </Link>
           <a className="link link-hover">Jobs</a>
           <a className="link link-hover">Press kit</a>
         </div>
