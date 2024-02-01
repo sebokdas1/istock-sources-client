@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { BsFillPhoneVibrateFill } from "react-icons/bs";
+import { FaTelegram, FaDiscord } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 import emailjs from "@emailjs/browser";
 import Contact1 from "../../Assets/contact1.png";
 import { MdMail } from "react-icons/md";
@@ -61,6 +63,29 @@ const Contact = () => {
                   </a>
                 </span>
               </h2>
+              <div className="flex justify-center items-center gap-4 mt-3">
+                <a
+                  className="text-2xl text-[#229ED9]"
+                  href="https://t.me/sebokdas1"
+                  target="_blank"
+                >
+                  <FaTelegram />
+                </a>
+                <a
+                  className="text-2xl text-[#075E54]"
+                  href="https://wa.me/+8801730661569?text"
+                  target="_blank"
+                >
+                  <IoLogoWhatsapp />
+                </a>
+                <a
+                  className="text-2xl text-[#7289da]"
+                  href="https://discord.com/users/885250899038060605"
+                  target="_blank"
+                >
+                  <FaDiscord />
+                </a>
+              </div>
             </div>
           </div>
         </div>

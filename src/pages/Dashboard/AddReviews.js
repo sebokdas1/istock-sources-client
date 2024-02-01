@@ -33,11 +33,11 @@ const AddReviews = () => {
       .then((res) => res.json())
       .then((inserted) => {
         if (inserted.insertedId) {
-          setReviewAdd("review added successfully");
+          setReviewAdd("Review added successfully");
           setReviewed(true);
-          //   console.log("review added successfully");
         }
       });
+    e.target.reset();
   };
   return (
     <div>
