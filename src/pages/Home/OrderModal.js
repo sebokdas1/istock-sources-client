@@ -60,7 +60,7 @@ const OrderModal = ({ part, refetch, setParts }) => {
             <input
               type="text"
               name="name"
-              readOnly
+              disabled
               placeholder={user?.displayName || ""}
               className="input input-bordered input-primary w-full max-w-xs"
             />
@@ -68,7 +68,7 @@ const OrderModal = ({ part, refetch, setParts }) => {
             <input
               type="email"
               name="email"
-              readOnly
+              disabled
               placeholder={user?.email || ""}
               className="input input-bordered input-primary w-full max-w-xs"
             />
@@ -78,7 +78,7 @@ const OrderModal = ({ part, refetch, setParts }) => {
               type="number"
               name="Oquantity"
               min="100"
-              max={quantity}
+              max="500"
               placeholder="Order quantity, minimum 100"
               className="input input-bordered input-primary w-full max-w-xs"
               required
