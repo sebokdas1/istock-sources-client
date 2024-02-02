@@ -31,7 +31,7 @@ const MyOrder = () => {
         })
         .then((data) => setOrders(data));
     }
-  }, [user, navigate]);
+  }, [user, navigate, orders]);
 
   return (
     <div>
