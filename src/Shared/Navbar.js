@@ -34,6 +34,9 @@ const Navbar = () => {
           <Link to="/login">Login</Link>
         )}
       </li>
+      <li className="lg:text-white">
+        <Link to="/contact">Contact</Link>
+      </li>
     </>
   );
   return (
