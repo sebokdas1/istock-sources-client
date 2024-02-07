@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
@@ -7,6 +7,18 @@ const AddReviews = () => {
   const [selecto, setSelecto] = useState(2);
   const [reviewAdd, setReviewAdd] = useState();
   const [reviewd, setReviewed] = useState(false);
+  const [reviews, setReviews] = useState([]);
+
+  //get reviews
+  useEffect(() => {
+    fetch("https://istock-sources-server.onrender.com/review")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+    const ts = reviews?.find((r) => r?.email === user?.email);
+    if (ts?.email === user?.email) {
+      setReviewed(true);
+    }
+  }, [reviews, user]);
 
   const handleReview = (e) => {
     e.preventDefault();
@@ -34,7 +46,6 @@ const AddReviews = () => {
       .then((inserted) => {
         if (inserted.insertedId) {
           setReviewAdd("Review added successfully");
-          setReviewed(true);
         }
       });
     e.target.reset();
