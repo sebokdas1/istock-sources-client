@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Blogs from "./pages/Blogs/Blogs";
 import AddProduct from "./pages/Dashboard/AddProduct";
@@ -91,8 +90,6 @@ function App() {
         <Route path="register" element={<Register />}></Route>
         <Route path="*" element={<DataNotFound />}></Route>
       </Routes>
-
-      <ToastContainer />
     </div>
   );
 }

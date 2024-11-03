@@ -17,14 +17,13 @@ const MyProfile = () => {
     isLoading,
     refetch,
   } = useQuery("users", () =>
-    fetch("https://istock-sources-server.onrender.com/user", {
+    fetch(`${process.env.REACT_APP_serverLink}/user`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     }).then((res) => res.json())
   );
-  // console.log(users);
   if (isLoading) {
     return <Loading />;
   }

@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
   const [clientSecret, setClientSecret] = useState("");
   const { _id, price, user, userName } = order;
   useEffect(() => {
-    fetch("https://istock-sources-server.onrender.com/create-payment-intent", {
+    fetch(`${process.env.REACT_APP_serverLink}/create-payment-intent`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -75,7 +75,7 @@ const CheckoutForm = ({ order }) => {
         order: _id,
         trxId: paymentIntent.id,
       };
-      fetch(`https://istock-sources-server.onrender.com/order/${_id}`, {
+      fetch(`${process.env.REACT_APP_serverLink}/order/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

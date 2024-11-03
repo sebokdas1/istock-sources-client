@@ -13,15 +13,12 @@ const MyOrder = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (user) {
-      fetch(
-        `https://istock-sources-server.onrender.com/order?user=${user.email}`,
-        {
-          method: "GET",
-          headers: {
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-          },
-        }
-      )
+      fetch(`${process.env.REACT_APP_serverLink}/order?user=${user.email}`, {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      })
         .then((res) => {
           if (res.status === 401 || res.status === 403) {
             signOut(auth);

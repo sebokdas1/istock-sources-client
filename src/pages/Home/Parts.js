@@ -8,9 +8,7 @@ import "./Parts.css";
 
 const Parts = () => {
   const { data: parts, isLoading } = useQuery("parts", () =>
-    fetch("https://istock-sources-server.onrender.com/part").then((res) =>
-      res.json()
-    )
+    fetch(`${process.env.REACT_APP_serverLink}/part`).then((res) => res.json())
   );
 
   if (isLoading) {
@@ -18,7 +16,6 @@ const Parts = () => {
   }
   return (
     <div>
-      {/* <h2 className='uppercase mt-5 text-center text-2xl text-green-400 font-bold'>Products</h2> */}
       <div className="grid md:grid-cols-3 gap-4 cols-gap-4">
         {parts?.slice(-6).map((part) => (
           <Part key={part._id} part={part}></Part>

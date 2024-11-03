@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useParts = () => {
   const [parts, setParts] = useState([]);
   useEffect(() => {
-    fetch("https://istock-sources-server.onrender.com/part")
+    fetch(`${process.env.REACT_APP_serverLink}/part`)
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, [parts]);

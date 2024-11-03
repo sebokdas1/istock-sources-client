@@ -12,7 +12,7 @@ import { Pagination } from "swiper";
 
 const Reviews = () => {
   const { data: reviews, isLoading } = useQuery("reviews", () =>
-    fetch("https://istock-sources-server.onrender.com/review").then((res) =>
+    fetch(`${process.env.REACT_APP_serverLink}/review`).then((res) =>
       res.json()
     )
   );

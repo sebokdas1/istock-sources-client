@@ -6,7 +6,7 @@ const CancelModal = ({ order, setOrder }) => {
 
   const handleCancel = (e) => {
     e.preventDefault();
-    const url = `https://istock-sources-server.onrender.com/order/${_id}`;
+    const url = `${process.env.REACT_APP_serverLink}/order/${_id}`;
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -15,7 +15,6 @@ const CancelModal = ({ order, setOrder }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         setOrder(null);
       });
   };

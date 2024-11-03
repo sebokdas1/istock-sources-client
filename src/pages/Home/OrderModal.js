@@ -25,7 +25,7 @@ const OrderModal = ({ part, refetch, setParts }) => {
       phone: e.target.phone.value,
     };
 
-    fetch("https://istock-sources-server.onrender.com/order", {
+    fetch(`${process.env.REACT_APP_serverLink}/order`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

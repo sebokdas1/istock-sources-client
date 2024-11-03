@@ -6,7 +6,7 @@ const RemoveUserModal = ({ rmUser, setRMUser }) => {
 
   const handleUserRemove = (e) => {
     e.preventDefault();
-    const url = `https://istock-sources-server.onrender.com/user/admin/${email}`;
+    const url = `${process.env.REACT_APP_serverLink}/user/admin/${email}`;
     fetch(url, {
       method: "DELETE",
       headers: {
@@ -15,7 +15,6 @@ const RemoveUserModal = ({ rmUser, setRMUser }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data)
         setRMUser(null);
       });
   };

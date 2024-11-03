@@ -11,7 +11,7 @@ const AddReviews = () => {
 
   //get reviews
   useEffect(() => {
-    fetch("https://istock-sources-server.onrender.com/review")
+    fetch(`${process.env.REACT_APP_serverLink}/review`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
     const ts = reviews?.find((r) => r?.email === user?.email);
@@ -34,7 +34,7 @@ const AddReviews = () => {
       description,
     };
 
-    fetch("https://istock-sources-server.onrender.com/review", {
+    fetch(`${process.env.REACT_APP_serverLink}review`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

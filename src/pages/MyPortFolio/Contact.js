@@ -2,31 +2,44 @@ import React, { useState } from "react";
 import { BsFillPhoneVibrateFill } from "react-icons/bs";
 import { FaTelegram, FaDiscord } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import emailjs from "@emailjs/browser";
 import Contact1 from "../../Assets/contact1.png";
 import { MdMail } from "react-icons/md";
 import "./Contact.css";
+import axios from "axios";
 
 const Contact = () => {
-  const [successMs, setSuccessMs] = useState("");
-  const sendMail = (e) => {
+  const [errorMessage, setErrorMessage] = useState("");
+  const sendMail = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_portfolio2.0",
-        "template_portfolio2.0",
-        e.target,
-        "qmE8kvRvoTnyw4LFU"
-      )
-      .then((res) => {})
-      .catch((err) => console.log(err));
-    setSuccessMs("I received your message, Thanks.");
-    e.target.reset();
+    const subject = e.target.subject.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+    if (!email || !subject || !message) {
+      setErrorMessage("All Fields are required");
+      return;
+    }
+
+    try {
+      const result = await axios.post(
+        `${process.env.REACT_APP_serverLink}/sentmessage`,
+        {
+          subject,
+          text: `${message} , 
+          email: ${email}`,
+        }
+      );
+      console.log(result.data.message);
+      if (result.data.status === 200) {
+        e.target.reset();
+      }
+    } catch (error) {
+      console.log(error?.message);
+    }
   };
   return (
     <section className="mt-6">
       <div className="p-[10px]">
-        <h1 className="text-[#735BE2] text-[55px] font-bold text-center leading-none">
+        <h1 className="text-cyan-600 text-[55px] font-bold text-center leading-none">
           Contact
         </h1>
         <h2 className="text-[#262626] text-[22px] font-bold text-center leading-none">
@@ -37,7 +50,7 @@ const Contact = () => {
         <div className="contact_personalDit lg:mr-[25px]">
           <img src={Contact1} alt="" />
           <div>
-            <h1 className="text-[#735BE2] text-[32px] font-bold">Sebok Das</h1>
+            <h1 className="text-cyan-600 text-[32px] font-bold">Sebok Das</h1>
             <h2 className="text-[#262626] text-[18px] font-semibold">
               Web Developer (Mern)
             </h2>
@@ -91,55 +104,43 @@ const Contact = () => {
         </div>
         <div className="contact_inputs mt-6 lg:mt-0 mx-[10px]">
           <form onSubmit={sendMail}>
-            <label className="font-semibold" for="name">
-              Your name
-            </label>
-            <input
-              className="input_styles"
-              type="text"
-              id="name"
-              name="name"
-              autoComplete="off"
-              required
-            />
-
-            <label className="font-semibold" for="email">
+            <label className="font-semibold" htmlFor="email">
               Your email
             </label>
             <input
-              className="input_styles"
+              className="input_styles outline-cyan-600"
               type="email"
               id="email"
               name="email"
-              required
+              onFocus={() => setErrorMessage("")}
             />
 
-            <label className="font-semibold" for="subject">
+            <label className="font-semibold" htmlFor="subject">
               Subject
             </label>
             <input
-              className="input_styles"
+              className="input_styles outline-cyan-600"
               type="text"
               id="subject"
               name="subject"
               autoComplete="off"
-              required
+              onFocus={() => setErrorMessage("")}
             />
-            <label className="font-semibold" for="message">
+            <label className="font-semibold" htmlFor="message">
               Your message
             </label>
             <textarea
-              className="input_styles"
+              className="input_styles outline-cyan-600"
               name="message"
               id="message"
               cols="30"
               rows="7"
               autoComplete="off"
-              required
+              onFocus={() => setErrorMessage("")}
             />
+            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
             <input className="input_submit" type="submit" value="Submit" />
           </form>
-          <h2 className="text-cyan-500 text-xl font-bold mt-1">{successMs}</h2>
         </div>
       </div>
     </section>
